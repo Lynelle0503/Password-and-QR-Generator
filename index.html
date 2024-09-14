@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators - Password & QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Let's <span>Gen</span>erate</h1>
+        <div class="split">
+            <div class="gpass">
+                <button><h2>a Random <span>Password</span></h2></button>
+                <div class="workarea gpass-active">
+                    <input type="text" id="password" placeholder="Password">
+                    <img onclick="copyPassword()" src = "copyimg.png" alt="copy">
+                    <div>
+                        <button onclick="createPassword()">Generate Password</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gqr">
+                <button><h2>a QR<span>Code</span></h2></button>
+                <div class="workarea gqr-active">
+                    <p>Enter text or URL</p>
+                    <input type="text" placeholder="Text or URL" id="qrText">
+                    <button onclick="generateQR()">Generate QR Code</button>
+                </div>
+                <div class="work-img">
+                    <div class="imgBox"></div>
+                        <img src="" id="qrImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
